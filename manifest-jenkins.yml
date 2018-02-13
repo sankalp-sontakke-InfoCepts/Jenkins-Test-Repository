@@ -1,7 +1,7 @@
 ---
 applications:
 - name: em-admin-jenkins-test
-  path: ./dist
+  path: ./*
   memory: 512M
   buildpack: nodejs_buildpack
   command:  polymer serve
