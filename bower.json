@@ -22,8 +22,9 @@
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#^6.0.0"
   },
-  "repository": {
-    "private": true
-  },
+  "repository" : {     
+     "type" : "git",
+      "url" : "https://github.com/sankalp-sontakke-InfoCepts/Jenkins-Test-Repository.git" 
+   },
   "private": true
 }
