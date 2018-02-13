@@ -9,6 +9,4 @@ applications:
     uaa_service_label : predix-uaa
     NODE_ENV: cloud
     APP_ENV: dev
-    UAA_CLIENT_ID: em.admin-ui.client
-    UAA_CLIENT_CREDENTIALS: ZW0uYWRtaW4tdWkuY2xpZW50OmVtLmFkbWluLXVpLnMzY3JldA==
-    sessionSecret: predixsample
+   
