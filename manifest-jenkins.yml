@@ -3,12 +3,22 @@ applications:
 - name: em-admin-jenkins-test
   path: ./dist
   memory: 512M
+  buildpack: nodejs_buildpack
+  command:  node server/index.js
   timeout: 180
-  services:
-	env:
+  env:
     uaa_service_label : predix-uaa
     NODE_ENV: cloud
     APP_ENV: dev
     UAA_CLIENT_ID: em.admin-ui.client
     UAA_CLIENT_CREDENTIALS: ZW0uYWRtaW4tdWkuY2xpZW50OmVtLmFkbWluLXVpLnMzY3JldA==
+
+    IE_ADMIN_URI: https://ie-ems-jace-administrator-ems-dev-v2.run.aws-usw02-pr.ice.predix.io
+    PERSISTENCE_URI: https://ie-ems-persistence-ems-dev-v2.run.aws-usw02-pr.ice.predix.io
+    SCHEDULE_URI : https://ie-ems-schedules-ems-dev-v2.run.aws-usw02-pr.ice.predix.io
+    ALARMS_L1_URI: https://ie-ems-rule-service-ems-dev-v2.run.aws-usw02-pr.ice.predix.io
+    BULK_DATA_LOADER_URI: https://ie-ems-bulk-data-loader-ems-dev-v2.run.aws-usw02-pr.ice.predix.io
+    UISERVICES_URI: https://ie-ems-ui-services-ems-dev-v2.run.aws-usw02-pr.ice.predix.io
+    ALARMS_URI: https://ie-ems-ui-services-walmart-ems-dev-v2.run.aws-usw02-pr.ice.predix.io
+    DATAEXPORT_URI: https://ie-ems-data-export-ems-dev-v2.run.aws-usw02-pr.ice.predix.io
     sessionSecret: predixsample
